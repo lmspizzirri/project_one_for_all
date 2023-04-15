@@ -1,7 +1,7 @@
 SELECT
-	COUNT(c.song_id) AS 'cancoes',
+	COUNT(s.song_id) AS 'cancoes',
     COUNT(DISTINCT(a.artist_id)) AS 'artistas',
     COUNT(DISTINCT(a.album_id)) AS 'albuns'
-FROM songs AS c
+FROM songs AS s
 INNER JOIN albums AS a
-ON c.album_id = a.album_id;
+ON s.album_id = a.album_id;
