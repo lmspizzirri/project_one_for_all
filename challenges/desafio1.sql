@@ -46,7 +46,13 @@ CREATE TABLE albums (
   album_id INT PRIMARY KEY AUTO_INCREMENT,
   album varchar(20) NOT NULL,
   artist_id INT NOT NULL,
-  release_year INT NOT NULL, p
+  release_year INT NOT NULL, 
+  created_at datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE artists (
+  artist_id INT PRIMARY KEY AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
   created_at datetime DEFAULT CURRENT_TIMESTAMP
 );
 
